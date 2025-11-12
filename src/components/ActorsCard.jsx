@@ -16,6 +16,10 @@ export default function ActorsCard({ actors }) {
           >
             <img
               src={actor.image}
+              onError={(e) => {
+                e.currentTarget.src =
+                  "https://i.pinimg.com/736x/1d/ec/e2/1dece2c8357bdd7cee3b15036344faf5.jpg";
+              }}
               className="card-img-top"
               alt={`${actor.name} image`}
             />
