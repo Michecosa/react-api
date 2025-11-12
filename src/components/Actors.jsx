@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ActorsCard from "./ActorsCard";
 
 export default function Actors({ actorsEndpoint, actressesEndpoint }) {
   const [actors, setActors] = useState([]);
@@ -21,7 +22,7 @@ export default function Actors({ actorsEndpoint, actressesEndpoint }) {
   return (
     <>
       <h1>Ciau</h1>
-      {loading && console.log(actors)}
+      {loading && <ActorsCard actors={actors} />}
     </>
   );
 }
