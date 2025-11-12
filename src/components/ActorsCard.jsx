@@ -45,13 +45,13 @@ export default function ActorsCard({ actors }) {
           </div>
           <div className="card-body">
             <h5>Awards:</h5>
-            {/*             <ul className="list-group list-group-flush">
-              {actor.awards.map((award, index) => (
-                <li key={index} className="list-group-item">
-                  {award}
-                </li>
-              ))}
-            </ul> */}
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">
+                {Array.isArray(actor.awards)
+                  ? actor.awards.join(", ")
+                  : actor.awards}
+              </li>
+            </ul>
           </div>
         </div>
       ))}
