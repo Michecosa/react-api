@@ -3,15 +3,23 @@ export default function ActorsCard({ actors }) {
     <>
       {actors.map((actor) => (
         <div
-          key={actor.id || actor.name}
+          key={actor.id}
           className="card col-12 col-md-6 col-xxl-4"
           style={{ width: "18rem" }}
         >
-          <img
-            src={actor.image}
-            className="card-img-top"
-            alt={`${actor.name} image`}
-          />
+          <div
+            className="flex-shrink-0"
+            style={{
+              aspectRatio: "1 / 1",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={actor.image}
+              className="card-img-top"
+              alt={`${actor.name} image`}
+            />
+          </div>
           <div className="card-body">
             <h3 className="card-title">{actor.name}</h3>
             <p className="card-text fw-semibold">
