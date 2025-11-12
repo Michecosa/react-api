@@ -7,7 +7,7 @@ function App() {
     <>
       <Actors
         actorsEndpoint={endpointActors}
-        endpointActresses={endpointActresses}
+        actressesEndpoint={endpointActresses}
       />
     </>
   );
