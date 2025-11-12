@@ -8,7 +8,6 @@ export default function ActorsCard({ actors }) {
           style={{ width: "18rem" }}
         >
           <div
-            className="flex-shrink-0"
             style={{
               aspectRatio: "1 / 1",
               overflow: "hidden",

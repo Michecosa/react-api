@@ -21,7 +21,7 @@ export default function Actors({ actorsEndpoint, actressesEndpoint }) {
 
   return (
     <>
-      <div className="container">
+      <div className="container my-4">
         {loading && <ActorsCard actors={actors} />}
       </div>
     </>
