@@ -6,7 +6,7 @@ export default function Actors({ actorsEndpoint, actressesEndpoint }) {
   const [maleActors, setMaleActors] = useState([]);
   const [femaleActors, setFemaleActors] = useState([]);
   const [actors, setActors] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -24,12 +24,12 @@ export default function Actors({ actorsEndpoint, actressesEndpoint }) {
 
   useEffect(() => {
     setActors([...maleActors, ...femaleActors]);
-    setLoading(false);
+    setLoading(true);
   }, [maleActors, femaleActors]);
 
   return (
     <div className="container my-4">
-      {loading || <ActorsCard actors={actors} />}
+      {loading && <ActorsCard actors={actors} />}
     </div>
   );
 }
