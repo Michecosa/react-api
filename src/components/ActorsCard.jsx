@@ -1,6 +1,6 @@
 export default function ActorsCard({ actors }) {
   return (
-    <>
+    <div className="row gap-3 justify-content-center">
       {actors.map((actor) => (
         <div
           key={actor.id}
@@ -50,6 +50,6 @@ export default function ActorsCard({ actors }) {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }

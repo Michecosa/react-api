@@ -21,7 +21,7 @@ export default function Actors({ actorsEndpoint, actressesEndpoint }) {
 
   return (
     <>
-      <div className="row g-3 custom-cards">
+      <div className="container">
         {loading && <ActorsCard actors={actors} />}
       </div>
     </>
