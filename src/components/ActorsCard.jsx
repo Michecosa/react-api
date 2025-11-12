@@ -1,9 +1,9 @@
 export default function ActorsCard({ actors }) {
   return (
     <div className="row gap-3 justify-content-center">
-      {actors.map((actor) => (
+      {actors.map((actor, index) => (
         <div
-          key={actor.id}
+          key={index}
           className="card col-12 col-md-6 col-xxl-4"
           style={{ width: "18rem" }}
         >
@@ -34,22 +34,24 @@ export default function ActorsCard({ actors }) {
           <div className="card-body">
             <h5>Known for:</h5>
             <ul className="list-group list-group-flush">
-              {actor.known_for.map((movie, index) => (
-                <li key={index} className="list-group-item">
-                  {movie}
-                </li>
-              ))}
+              {(actor.known_for || actor.most_famous_movies)?.map(
+                (movie, index) => (
+                  <li key={index} className="list-group-item">
+                    {movie}
+                  </li>
+                )
+              )}
             </ul>
           </div>
           <div className="card-body">
             <h5>Awards:</h5>
-            <ul className="list-group list-group-flush">
+            {/*             <ul className="list-group list-group-flush">
               {actor.awards.map((award, index) => (
                 <li key={index} className="list-group-item">
                   {award}
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
       ))}
